@@ -24,7 +24,7 @@ namespace RevitApp
             string tabName = "My custom tab";
             application.CreateRibbonTab(tabName);
             RibbonPanel ribbonPanel = application.CreateRibbonPanel(tabName, "Автоматизация");
-            AddButton(ribbonPanel, "Button 1", assemblyPath, "RevitApp.TestPlagin", "Подсказка");
+            AddButton(ribbonPanel, "Button 1", assemblyPath, "RevitApp.SearchPluginCommand", "Подсказка");
             return Result.Succeeded;
         }
 

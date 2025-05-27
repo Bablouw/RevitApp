@@ -1,0 +1,34 @@
+﻿<Window x:Class="RevitApp.SumParamPlugin.View.SumParamView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:RevitApp.SumParamPlugin.View"
+        mc:Ignorable="d" 
+        d:DataContext="{d:DesignInstance Type=local:ViewModel, IsDesignTimeCreatable=True}"
+        Height="400" Width="300"
+        Title="Search Plugin">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row ="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Click="Button_Click" Margin="5" Padding="5" Content="Посчитать" Width="100" />
+        </StackPanel>
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding ParametersSums}" 
+                  AutoGenerateColumns="False" 
+                  CanUserAddRows="False" 
+                  Margin="10" 
+                  HorizontalAlignment="Stretch" 
+                  IsReadOnly="True" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Параметр" Binding="{Binding Name}" Width="*" />
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Sum}" Width="*" />
+                <DataGridTextColumn Header="ед.изм." Binding="{Binding Unit}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

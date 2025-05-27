@@ -1,7 +1,7 @@
 <RevitAddIns>
 <AddIn Type="Application">
-	<Name>TestPlagin</Name>
-	<Assembly>RevitApp.dll</Assembly>
+	<Name>SearchPlugin</Name>
+	<Assembly>RevitApp\RevitApp.dll</Assembly>
 	<AddInId>2DE669CB-D848-478F-BA3F-0850C46033E4</AddInId>
 	<FullClassName>RevitApp.RevitApplication</FullClassName>
 	<Text>Моя первая команда</Text>
