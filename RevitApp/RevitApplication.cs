@@ -21,10 +21,10 @@ namespace RevitApp
 
         public Result OnStartup(UIControlledApplication application)
         {
-            string tabName = "My custom tab";
+            string tabName = "CustomTab";
             application.CreateRibbonTab(tabName);
             RibbonPanel ribbonPanel = application.CreateRibbonPanel(tabName, "Автоматизация");
-            AddButton(ribbonPanel, "Button 1", assemblyPath, "RevitApp.SearchPluginCommand", "Подсказка");
+            AddButton(ribbonPanel, "Button 1", assemblyPath, "RevitApp.SumParamPluginCommand", "Подсказка");
             return Result.Succeeded;
         }
 

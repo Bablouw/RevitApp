@@ -1,11 +1,11 @@
 <RevitAddIns>
-<AddIn Type="Application">
-	<Name>SearchPlugin</Name>
-	<Assembly>RevitApp\RevitApp.dll</Assembly>
-	<AddInId>2DE669CB-D848-478F-BA3F-0850C46033E4</AddInId>
-	<FullClassName>RevitApp.RevitApplication</FullClassName>
-	<Text>Моя первая команда</Text>
-	<VendorId>MyId</VendorId>
-	<VendorDescription></VendorDescription>
-</AddIn>
+	<AddIn Type="Application">
+		<Name>SummPlugin</Name>
+		<Assembly>RevitApp\RevitApp.dll</Assembly>
+		<AddInId>2DE669CB-D848-478F-BA3F-0850C46033E4</AddInId>
+		<FullClassName>RevitApp.RevitApplication</FullClassName>
+		<Text>Моя первая команда</Text>
+		<VendorId>MyId</VendorId>
+		<VendorDescription></VendorDescription>
+	</AddIn>
 </RevitAddIns>

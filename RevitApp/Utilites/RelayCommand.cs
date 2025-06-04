@@ -25,7 +25,6 @@ namespace RevitApp.Utilites
         {
             return canExecute?.Invoke(parameter) ?? true;
         }
-
         public void Execute(object parameter)
         {
             execute(parameter);
