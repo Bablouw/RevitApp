@@ -33,8 +33,12 @@ namespace RevitApp.ModelChecker.Model
             Document tempDoc = app.OpenDocumentFile(modelPath, tempOptions);
             options.DetachFromCentralOption = DetachFromCentralOption.DetachAndPreserveWorksets;
             WorksetConfiguration configuration = new WorksetConfiguration();
-            configuration.Open(GetWorksetIdsToOpen(tempDoc));
+            IList<WorksetId> worksetIds = GetWorksetIdsToOpen(tempDoc);
             tempDoc.Close(false);
+            configuration.Open(worksetIds);
+            options.SetOpenWorksetsConfiguration(configuration);
+            Document doc = app.OpenDocumentFile(modelPath, options);
+            return doc;
         }
         private IList<WorksetId> GetWorksetIdsToOpen (Document doc)
         {
