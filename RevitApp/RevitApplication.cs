@@ -25,6 +25,7 @@ namespace RevitApp
             application.CreateRibbonTab(tabName);
             RibbonPanel ribbonPanel = application.CreateRibbonPanel(tabName, "Автоматизация");
             AddButton(ribbonPanel, "Button 1", assemblyPath, "RevitApp.SumParamPluginCommand", "Подсказка");
+            AddButton(ribbonPanel, "Button 2", assemblyPath, "RevitApp.ModelCheackerCommand", "Подсказка");
             return Result.Succeeded;
         }
 

@@ -19,7 +19,7 @@ using System.Windows.Media.Imaging;
 namespace RevitApp
 {
     [Autodesk.Revit.Attributes.TransactionAttribute(Autodesk.Revit.Attributes.TransactionMode.Manual)]
-    public class SumParamPluginCommand : IExternalCommand
+    public class ModelCheackerCommand : IExternalCommand
     {
         static AddInId addinId = new AddInId(new Guid("2DE669CB-D848-478F-BA3F-0850C46033E4"));
         private SumParamView _view;
@@ -30,10 +30,7 @@ namespace RevitApp
                 RevitApi.Initialize(commandData);
             }
             var viewModel = new ViewModel();
-            _view = new SumParamView(viewModel);
-            _view.Show();
-            RevitApi.Application.DocumentClosed += OnDocumentClosed;
-            return Result.Succeeded;
+
         }
         private void OnDocumentClosed(object sender, DocumentClosedEventArgs e)
         {
