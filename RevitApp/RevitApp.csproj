@@ -71,6 +71,7 @@
     <Compile Include="Commands\ModelCheackerCommand.cs" />
     <Compile Include="ModelChecker\Model\ModelOpener.cs" />
     <Compile Include="ModelChecker\Model\ModelPreparer.cs" />
+    <Compile Include="ModelChecker\Model\ViewLister.cs" />
     <Compile Include="RevitApi.cs" />
     <Compile Include="RevitApplication.cs" />
     <Compile Include="Commands\SumParamPluginCommand.cs" />
